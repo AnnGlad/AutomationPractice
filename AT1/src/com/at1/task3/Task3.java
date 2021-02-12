@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 public class Task3 {
 
-    public static void Execute() {
-        System.out.println("Task3");
+    public static void execute() {
+
+        System.out.println("Task3: The user enters the values of two variables. The program implements the basic mathematical operations on these variables (+ - * / %).");
         Scanner userInput = new Scanner(System.in);
         System.out.println("Type in 1st numeric value and hit Enter:");
         double val1 = userInput.nextDouble();
@@ -41,10 +42,9 @@ public class Task3 {
                 break;
             default:
                 System.err.println("Invalid operation code. Please use only +, -, /, *, %");
-                result = 0;
                 break;
-
         }
+
     }
 
 }

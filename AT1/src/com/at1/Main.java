@@ -7,10 +7,9 @@ import com.at1.task3.Task3;
 public class Main {
 
     public static void main(String[] args) {
-        Task1.Execute();
-        Task2.Execute();
-        Task3.Execute();
+        Task1.execute();
+        Task2.execute();
+        Task3.execute();
     }
-
 
 }

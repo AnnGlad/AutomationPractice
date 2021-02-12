@@ -4,9 +4,10 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Task1 {
-    public static void Execute() {
 
-        System.out.println("Task1");
+    public static void execute() {
+
+        System.out.println("Task1: Fill the array with data (random). Print out. Replace all negative values with 0. Print.");
         Scanner userInput = new Scanner(System.in);
         System.out.println("Please type in array length (How many numbers do you want in your array?)");
         int arrLength = userInput.nextInt();
@@ -26,13 +27,13 @@ public class Task1 {
             if (min < 0) {
                 boolean isLesser = false;
                 //Checking for values less than 0
-                for (int i = 0; i < array.length; i++) {
-                    if (array[i] < 0) {
+                for (int currentVal : array) {
+                    if (currentVal < 0) {
                         isLesser = true;
                         break;
                     }
                 }
-                if (isLesser == true) {
+                if (isLesser) {
                     System.out.println("Changing negative values in the array to 0...");
                     for (int i = 0; i < array.length; i++) {
                         if (array[i] < 0) {
@@ -53,4 +54,5 @@ public class Task1 {
         }
 
     }
+
 }

@@ -4,24 +4,27 @@ import java.util.Scanner;
 
 public class Task2 {
 
-    public static void Execute() {
-        System.out.println("Task2");
+    public static void execute() {
+
+        System.out.println("Task2. The user enters the number of lines, then the values of these lines. The program calculates the average length of lines and displays on the screen.");
         Scanner scan = new Scanner(System.in);
         System.out.println("Type in number of lines (use integers, > 0):");
-        int quantity = scan.nextInt();
+        int numOfLines = scan.nextInt();
         double sumOfLines = 0;
         double averageLength = 0;
-        if (quantity > 0) {
-            for (int i = 0; i < quantity; i++) {
-                System.out.println("Type in length for the " + (i + 1) + " line");
-                double line = scan.nextDouble();
-                sumOfLines += line;
+        if (numOfLines > 0) {
+            for (int i = 0; i < numOfLines; i++) {
+                System.out.println("Type in your" + (i + 1) + " line");
+                String line = scan.next();
+                int lineLength = line.length();
+                sumOfLines += lineLength;
             }
-            averageLength = sumOfLines / quantity;
+            averageLength = sumOfLines / numOfLines;
             System.out.println("Average length of lines is: " + averageLength);
         } else {
             System.out.println("Please enter number of lines more than 0");
         }
+
     }
 
 }
